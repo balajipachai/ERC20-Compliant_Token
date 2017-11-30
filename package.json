@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "async": "^2.6.0",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -14,6 +15,6 @@
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5",
     "solc": "^0.4.18",
-    "web3": "^1.0.0-beta.26"
+    "web3": "^0.19.1"
   }
 }
