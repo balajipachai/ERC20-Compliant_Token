@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/customizedApprove.js"></script>
+  </head>
+
+  <body>
+    <h1><%= title %></h1>
+    <form id="customizedApproveForm">
+      <p>
+        `Main account` approves `Spender` to spend `Value` tokens
+       </p>
+      <p>
+          Spender The address of the account able to transfer the tokens
+      </p>
+      <p>
+        Value The amount of wei to be approved for transfer
+      </p>
+      <p>
+        Returns whether the approval was successful or not
+        </p>
+
+
+    <input type="text" name="spender"  placeholder="Enter Spender's address"/><br><br>
+    <input type="text" name="value" placeholder="Enter Amount in Wei "/><br><br>
+    <input type="submit" >
+    </form>
+  </body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/customizedApproveAndCall.js"></script>
+  </head>
+
+  <body>
+    <h1><%= title %></h1>
+    <form id="customizedApproveAndCallForm">
+      <p>
+         Approves and then calls the receiving contract
+      </p>
+    <input type="text" name="spender"  placeholder="Enter Spender's address"/><br><br>
+    <input type="text" name="value" placeholder="Enter Amount in Wei "/><br><br>
+    <input type="text" name="message" placeholder="Enter The Purpose... "/><br><br>
+
+    <input type="submit" >
+    </form>
+  </body>
+
+</html>
