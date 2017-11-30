@@ -1,16 +1,14 @@
 $(document).ready(function(){
 
-	$('#customizedTokenForm').submit(function(event){
+	$('#customizedTransferForm').submit(function(event){
 		event.preventDefault();
 
 		// formData will store all the form field's values in a JSON object
 		var formData = {};
 
 		// Gets the Customized Token Fields
-		formData.totalSupply = $("input[name='totalSupply']").val();
-		formData.tokenName = $("input[name='tokenName']").val();
-		formData.tokenDecimals = $("input[name='tokenDecimals']").val();
-		formData.tokenSymbol = $("input[name='tokenSymbol']").val();
+		formData.to = $("input[name='to']").val();
+		formData.value = $("input[name='value']").val();
 
 		//console.log("Printing the formData");
 		//console.log(formData);
@@ -18,10 +16,11 @@ $(document).ready(function(){
 		// Post request to save custom token details
 		$.ajax({
 			type: "POST",
-			url: "/customToken",
+			url: "/customToken/transfer",
 			data: formData,
 			success: function(res){
-				alert("Token Created Successfully");
+				console.log(res);
+				alert("Transferred");
 				window.location.href = window.location.protocol + '/tokenOperations';
 			},
 			error: function (err){
